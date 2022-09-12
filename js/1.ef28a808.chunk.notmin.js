@@ -12785,7 +12785,7 @@
                                 r = i(3);
                             const a = Symbol("onMouseForceWillBegin"),
                                 l = Symbol("onMouseForceDown"),
-                                u = Symbol("onMouseDown"),
+                                u = Symbol("onPointerDown"),
                                 c = Symbol("onMouseForceChange"),
                                 h = Symbol("onMouseMove"),
                                 p = Symbol("onMouseUp"),
@@ -12873,7 +12873,7 @@
                                 s = i(4),
                                 r = (n = s) && n.__esModule ? n : { default: n },
                                 a = i(3);
-                            const l = Symbol("onMouseDown"),
+                            const l = Symbol("onPointerDown"),
                                 u = Symbol("onMouseUp"),
                                 c = Symbol("onDragStart"),
                                 h = Symbol("onDragOver"),
@@ -12883,7 +12883,7 @@
                             class y extends r.default {
                                 constructor(t = [], e = {}) {
                                     super(t, e),
-                                        (this.mouseDownTimeout = null),
+                                        (this.pointerDownTimeout = null),
                                         (this.draggableElement = null),
                                         (this.nativeDraggableElement = null),
                                         (this[l] = this[l].bind(this)),
@@ -12937,7 +12937,7 @@
                                         document.addEventListener("drop", this[d], !1);
                                     const i = (0, o.closest)(t.target, this.options.draggable);
                                     i &&
-                                        (this.mouseDownTimeout = setTimeout(() => {
+                                        (this.pointerDownTimeout = setTimeout(() => {
                                             (i.draggable = !0), (this.draggableElement = i);
                                         }, this.options.delay));
                                 }
@@ -12945,7 +12945,7 @@
                                     this[f]();
                                 }
                                 [f]() {
-                                    clearTimeout(this.mouseDownTimeout),
+                                    clearTimeout(this.pointerDownTimeout),
                                         document.removeEventListener("mouseup", this[u], !0),
                                         document.removeEventListener("dragstart", this[c], !1),
                                         document.removeEventListener("dragover", this[h], !1),
@@ -13105,14 +13105,14 @@
                                 r = (n = s) && n.__esModule ? n : { default: n },
                                 a = i(3);
                             const l = Symbol("onContextMenuWhileDragging"),
-                                u = Symbol("onMouseDown"),
+                                u = Symbol("onPointerDown"),
                                 c = Symbol("onMouseMove"),
                                 h = Symbol("onMouseUp");
                             class p extends r.default {
                                 constructor(t = [], e = {}) {
                                     super(t, e),
-                                        (this.mouseDown = !1),
-                                        (this.mouseDownTimeout = null),
+                                        (this.pointerDown = !1),
+                                        (this.pointerDownTimeout = null),
                                         (this.openedContextMenu = !1),
                                         (this[l] = this[l].bind(this)),
                                         (this[u] = this[u].bind(this)),
@@ -13132,10 +13132,10 @@
                                         i = (0, o.closest)(e, this.containers);
                                     i &&
                                         (document.addEventListener("dragstart", d),
-                                        (this.mouseDown = !0),
-                                        clearTimeout(this.mouseDownTimeout),
-                                        (this.mouseDownTimeout = setTimeout(() => {
-                                            if (!this.mouseDown) return;
+                                        (this.pointerDown = !0),
+                                        clearTimeout(this.pointerDownTimeout),
+                                        (this.pointerDownTimeout = setTimeout(() => {
+                                            if (!this.pointerDown) return;
                                             const n = new a.DragStartSensorEvent({ clientX: t.clientX, clientY: t.clientY, target: e, container: i, originalEvent: t });
                                             this.trigger(i, n),
                                                 (this.currentContainer = i),
@@ -13150,7 +13150,7 @@
                                     this.trigger(this.currentContainer, i);
                                 }
                                 [h](t) {
-                                    if (((this.mouseDown = Boolean(this.openedContextMenu)), this.openedContextMenu)) return void (this.openedContextMenu = !1);
+                                    if (((this.pointerDown = Boolean(this.openedContextMenu)), this.openedContextMenu)) return void (this.openedContextMenu = !1);
                                     if ((document.removeEventListener("mouseup", this[h]), document.removeEventListener("dragstart", d), !this.dragging)) return;
                                     const e = document.elementFromPoint(t.clientX, t.clientY),
                                         i = new a.DragStopSensorEvent({ clientX: t.clientX, clientY: t.clientY, target: e, container: this.currentContainer, originalEvent: t });
