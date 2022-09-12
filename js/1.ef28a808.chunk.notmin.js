@@ -12788,7 +12788,7 @@
                                 u = Symbol("onPointerDown"),
                                 c = Symbol("onMouseForceChange"),
                                 h = Symbol("onMouseMove"),
-                                p = Symbol("onMouseUp"),
+                                p = Symbol("onPointerUp"),
                                 d = Symbol("onMouseForceGlobalChange");
                             class f extends s.default {
                                 constructor(t = [], e = {}) {
@@ -12807,7 +12807,7 @@
                                             t.addEventListener("webkitmouseforcedown", this[l], !1),
                                             t.addEventListener("pointerdown", this[u], !0),
                                             t.addEventListener("webkitmouseforcechanged", this[c], !1);
-                                    document.addEventListener("mousemove", this[h]), document.addEventListener("mouseup", this[p]);
+                                    document.addEventListener("mousemove", this[h]), document.addEventListener("pointerup", this[p]);
                                 }
                                 detach() {
                                     for (const t of this.containers)
@@ -12815,7 +12815,7 @@
                                             t.removeEventListener("webkitmouseforcedown", this[l], !1),
                                             t.removeEventListener("pointerdown", this[u], !0),
                                             t.removeEventListener("webkitmouseforcechanged", this[c], !1);
-                                    document.removeEventListener("mousemove", this[h]), document.removeEventListener("mouseup", this[p]);
+                                    document.removeEventListener("mousemove", this[h]), document.removeEventListener("pointerup", this[p]);
                                 }
                                 [a](t) {
                                     t.preventDefault(), (this.mightDrag = !0);
@@ -12874,7 +12874,7 @@
                                 r = (n = s) && n.__esModule ? n : { default: n },
                                 a = i(3);
                             const l = Symbol("onPointerDown"),
-                                u = Symbol("onMouseUp"),
+                                u = Symbol("onPointerUp"),
                                 c = Symbol("onDragStart"),
                                 h = Symbol("onDragOver"),
                                 p = Symbol("onDragEnd"),
@@ -12917,7 +12917,7 @@
                                 }
                                 [p](t) {
                                     if (!this.dragging) return;
-                                    document.removeEventListener("mouseup", this[u], !0);
+                                    document.removeEventListener("pointerup", this[u], !0);
                                     const e = document.elementFromPoint(t.clientX, t.clientY),
                                         i = this.currentContainer,
                                         n = new a.DragStopSensorEvent({ clientX: t.clientX, clientY: t.clientY, target: e, container: i, originalEvent: t });
@@ -12930,7 +12930,7 @@
                                     if (t.target && (t.target.form || t.target.contenteditable)) return;
                                     const e = (0, o.closest)(t.target, (t) => t.draggable);
                                     e && ((e.draggable = !1), (this.nativeDraggableElement = e)),
-                                        document.addEventListener("mouseup", this[u], !0),
+                                        document.addEventListener("pointerup", this[u], !0),
                                         document.addEventListener("dragstart", this[c], !1),
                                         document.addEventListener("dragover", this[h], !1),
                                         document.addEventListener("dragend", this[p], !1),
@@ -12946,7 +12946,7 @@
                                 }
                                 [f]() {
                                     clearTimeout(this.pointerDownTimeout),
-                                        document.removeEventListener("mouseup", this[u], !0),
+                                        document.removeEventListener("pointerup", this[u], !0),
                                         document.removeEventListener("dragstart", this[c], !1),
                                         document.removeEventListener("dragover", this[h], !1),
                                         document.removeEventListener("dragend", this[p], !1),
@@ -13107,7 +13107,7 @@
                             const l = Symbol("onContextMenuWhileDragging"),
                                 u = Symbol("onPointerDown"),
                                 c = Symbol("onMouseMove"),
-                                h = Symbol("onMouseUp");
+                                h = Symbol("onPointerUp");
                             class p extends r.default {
                                 constructor(t = [], e = {}) {
                                     super(t, e),
@@ -13127,7 +13127,7 @@
                                 }
                                 [u](t) {
                                     if (0 !== t.button || t.ctrlKey || t.metaKey) return;
-                                    document.addEventListener("mouseup", this[h]);
+                                    document.addEventListener("pointerup", this[h]);
                                     const e = document.elementFromPoint(t.clientX, t.clientY),
                                         i = (0, o.closest)(e, this.containers);
                                     i &&
@@ -13151,7 +13151,7 @@
                                 }
                                 [h](t) {
                                     if (((this.pointerDown = Boolean(this.openedContextMenu)), this.openedContextMenu)) return void (this.openedContextMenu = !1);
-                                    if ((document.removeEventListener("mouseup", this[h]), document.removeEventListener("dragstart", d), !this.dragging)) return;
+                                    if ((document.removeEventListener("pointerup", this[h]), document.removeEventListener("dragstart", d), !this.dragging)) return;
                                     const e = document.elementFromPoint(t.clientX, t.clientY),
                                         i = new a.DragStopSensorEvent({ clientX: t.clientX, clientY: t.clientY, target: e, container: this.currentContainer, originalEvent: t });
                                     this.trigger(this.currentContainer, i), document.removeEventListener("contextmenu", this[l]), document.removeEventListener("mousemove", this[c]), (this.currentContainer = null), (this.dragging = !1);
