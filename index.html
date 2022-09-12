@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Double Exposure</title><link href="bundle.css" rel="stylesheet">
+	</head>
+	<style>.loading
+	{
+		position: fixed;
+		display: flex;
+
+		width: 100%;
+		height: 100%;
+
+		top: 0px;
+		left: 0px;
+		right: 0px;
+		bottom: 0px;
+
+		padding: 0;
+		margin: 0;
+
+		z-index: 10000;
+
+		background: black;
+		color: white;
+		font-family: sans-serif;
+	}
+
+	.loading h1
+	{
+		margin: auto;
+		font-family: termina, sans-serif;
+	}</style>
+	<body>
+		<div id="loading" class="loading">
+			<h1>loading</h1>
+		</div>
+		<div id="topbar" class="topbar">
+			<div id="track-id" class="track-id"></div>
+			<div id="info-button" class="info-button"></div>
+		</div>
+		<div id="info-window" class="info-window">
+			<div id="info-container" class="info-container">
+				<div id="info" class="info"></div>
+			</div>
+		</div>
+		<div id="xyPad" class="xyPad">
+			<div id="node1" class="node"></div>
+			<div class="pane" id="pane1"></div>
+			<div class="pane" id="pane2"></div>
+		</div>
+		<div class="controls" id="controls">
+			<div class="play-pause previous" id="previous"></div>
+			<div class="play-pause play" id="playPause"></div>
+			<input id="progress" type="range" class="progress" value="0" min="0" max="1" step=".001">
+			<div class="play-pause next" id="next"></div>
+		</div>
+		<script src="js/1.ef28a808.chunk.notmin.js"></script>
+		<script src="js/app.565d64d8.notmin.js"></script>
+	</body>
+</html>

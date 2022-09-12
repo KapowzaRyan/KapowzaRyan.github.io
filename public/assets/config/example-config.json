@@ -1,0 +1,54 @@
+{
+	"title" : "Double Exposure",
+	"artist" : "Artist Name Here",
+	"year" : "2019",
+	"about" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+	"tracks" : 
+	[
+		{
+			"title": "Song Title 1",
+			"audio": [
+				"public/assets/audio/track1-audiofile1.mp3",
+				"public/assets/audio/track1-audiofile2.mp3",
+				"public/assets/audio/track1-audiofile3.mp3",
+				"public/assets/audio/track1-audiofile4.mp3"
+			],
+			"colors": {
+				"br" : [ [ 101, 100, 14 ], [ 44, 100, 33 ] ],
+				"bl" : [ [ 0, 67, 36 ], [ 219, 67, 41 ] ],
+				"tr" : [ [ 95, 63, 37 ], [ 44, 100, 50 ] ],
+				"tl" : [ [ 0, 79, 57 ], [ 227, 100, 70 ] ]
+		    }
+		},
+		{
+			"title": "Song Title 2",
+			"audio": [
+				"public/assets/audio/track2-audiofile1.mp3",
+				"public/assets/audio/track2-audiofile2.mp3",
+				"public/assets/audio/track2-audiofile3.mp3",
+				"public/assets/audio/track2-audiofile4.mp3"
+			],
+			"colors": {
+				"br" : [ [ 101, 100, 14 ], [ 44, 100, 33 ] ],
+				"bl" : [ [ 0, 67, 36 ], [ 219, 67, 41 ] ],
+				"tr" : [ [ 95, 63, 37 ], [ 44, 100, 50 ] ],
+				"tl" : [ [ 0, 79, 57 ], [ 227, 100, 70 ] ]
+		    }
+		},
+		{
+			"title": "Song Title 3",
+			"audio": [
+				"public/assets/audio/track3-audiofile1.mp3",
+				"public/assets/audio/track3-audiofile2.mp3",
+				"public/assets/audio/track3-audiofile3.mp3",
+				"public/assets/audio/track3-audiofile4.mp3"
+			],
+			"colors": {
+				"br" : [ [ 101, 100, 14 ], [ 44, 100, 33 ] ],
+				"bl" : [ [ 0, 67, 36 ], [ 219, 67, 41 ] ],
+				"tr" : [ [ 95, 63, 37 ], [ 44, 100, 50 ] ],
+				"tl" : [ [ 0, 79, 57 ], [ 227, 100, 70 ] ]
+		    }
+		}
+	]
+}

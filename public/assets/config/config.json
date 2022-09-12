@@ -1,0 +1,52 @@
+{
+	"title": "Double Exposure",
+	"artist": "Artist Name Here",
+	"year": "2019",
+	"about": "<i>Double Exposure</i> is a digital tool built to engage with an audio recording experiment, which combined total improvisation and overdubbing. The movement of the floating box varies the audio mix between recording sessions. The box floats autonomously or may be guided by the viewer.<br><br><a href='http://ak.studio' target='_blank'>AK.STUDIO</a>",
+	"tracks": [{
+			"title": "",
+			"audio": [
+				"public/assets/audio/cavepaintingsstem1.mp3",
+				"public/assets/audio/cavepaintingsstem2.mp3",
+				"public/assets/audio/cavepaintingsstem3.mp3",
+				"public/assets/audio/cavepaintingsstem4.mp3"
+			],
+			"colors": {
+				"br" : [ [ 101, 100, 14 ], [ 44, 100, 33 ] ],
+				"bl" : [ [ 0, 67, 36 ], [ 219, 67, 41 ] ],
+				"tr" : [ [ 95, 63, 37 ], [ 44, 100, 50 ] ],
+				"tl" : [ [ 0, 79, 57 ], [ 227, 100, 70 ] ]
+		    }
+		},
+		{
+			"title": "",
+			"audio": [
+				"public/assets/audio/hiddenchamberstem1.mp3",
+				"public/assets/audio/hiddenchamberstem2.mp3",
+				"public/assets/audio/hiddenchamberstem3.mp3",
+				"public/assets/audio/hiddenchamberstem4.mp3"
+			],
+			"colors": {
+				"br" : [ [ 0, 0, 0 ], [ 360, 100, 100 ] ],
+				"bl" : [ [ 211, 44, 51 ], [ 272, 45, 62 ] ],
+				"tr" : [ [ 23, 40, 59 ], [ 39, 100, 57 ] ],
+				"tl" : [ [ 84, 70, 63 ], [ 353, 100, 85 ] ]
+		    }
+		},
+		{
+			"title": "",
+			"audio": [
+				"public/assets/audio/metamorphosesstem1.mp3",
+				"public/assets/audio/metamorphosesstem2.mp3",
+				"public/assets/audio/metamorphosesstem3.mp3",
+				"public/assets/audio/metamorphosesstem4.mp3"
+			],
+			"colors": {
+				"br" : [ [ 234, 100, 32 ], [ 193, 60, 87 ] ],
+				"bl" : [ [ 7, 98, 39 ], [ 45, 100, 91 ] ],
+				"tr" : [ [ 109, 46, 47 ], [ 176, 85, 91 ] ],
+				"tl" : [ [ 344, 51, 40 ], [ 127, 100, 95 ] ]
+		    }
+		}
+	]
+}
